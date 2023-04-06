@@ -12,6 +12,9 @@ const Titulo = styled.h1`
   background: linear-gradient(45deg, #6e5feb, #110, #102, #230, #100);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  @media (max-width: 767px) {
+    font-size:25px;
+  }
 `;
 
 const Subtitulo = styled.h2`
@@ -23,6 +26,9 @@ const Subtitulo = styled.h2`
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-top: 0;
+  @media (max-width: 767px) {
+    font-size:20px;
+  }
 `;
  const IconFoto = styled.img`
   width: 110px;
@@ -32,11 +38,7 @@ const Subtitulo = styled.h2`
   display:flex;
   border: solid 2px;
   
-  @media (max-width: 767px) {
-    width: 30px;
-    height: 30px;
-    margin: 2px;
-  }
+ 
 `
 const DivIcon = styled.div`
 width: 110px;
@@ -81,11 +83,7 @@ width: 110px;
     border-radius: 50%;
   }
 
-  @media (max-width: 767px) {
-    width: 30px;
-    height: 30px;
-    margin: 2px;
-  }
+  
 `
 
 
