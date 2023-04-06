@@ -28,6 +28,7 @@ const Subtitulo = styled.h2`
   margin-top: 0;
   @media (max-width: 767px) {
     font-size:20px;
+    color:#36393d;
   }
 `;
  const IconFoto = styled.img`
