@@ -102,28 +102,29 @@ export const Icon = styled.img`
   }
 `
 export const DivProjects = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 10px 0 0 0;
-  height: 100%;
-  flex-direction: column;
-  width: 80%;
-  text-align: center; /* Centra solo los elementos h1 */
+display: flex;
+justify-content: center;
+padding: 10px 0 0 0;
+height: 100%;
+flex-direction: column;
+width: 80%;
+text-align: center; /* Centra solo los elementos h1 */
 
-  & > :first-child {
-    flex-grow: 1;
-  }
-
-  & > :last-child {
-    flex-grow: 3;
-  }
-  @media (max-width: 600px) {
-    /* Anula el ancho del contenedor en dispositivos móviles */
-    width: 100%;
-
- 
+& > :first-child {
+  flex-grow: 1;
 }
-`
+
+& > :last-child {
+  flex-grow: 3;
+}
+
+@media (max-width: 600px) {
+  /* Anula el ancho del contenedor en dispositivos móviles */
+  width: 100%;
+}
+`;
+
+
 
 
 
