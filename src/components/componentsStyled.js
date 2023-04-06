@@ -2,6 +2,7 @@ import styled from "styled-components"
 import Image from 'next/image'
 import { Button } from "@mui/material"
 
+
 export const Nav = styled.nav`
 width:100%;
 background-color:transparent;
@@ -57,8 +58,7 @@ export const ImageCircular = styled(Image)`
 
 export const DivColumn = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+
   height: 100%;
   flex-direction: column;
   width: 70%;
@@ -83,14 +83,23 @@ export const DivColumn = styled.div`
 `
 
 export const DivRow = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100%;
-flex-direction: row;
-text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+`
 
-
+export const Icon = styled.img`
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  
+  @media (max-width: 767px) {
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+  }
 `
 export const DivProjects = styled.div`
   display: flex;
@@ -98,7 +107,6 @@ export const DivProjects = styled.div`
   padding: 10px 0 0 0;
   height: 100%;
   flex-direction: column;
-
   width: 80%;
   text-align: center; /* Centra solo los elementos h1 */
 
@@ -109,10 +117,11 @@ export const DivProjects = styled.div`
   & > :last-child {
     flex-grow: 3;
   }
+  @media (max-width: 600px) {
+    /* Anula el ancho del contenedor en dispositivos móviles */
+    width: 100%;
 
-  & :not(h1) { /* Aplica estilos a todos los elementos excepto h1 */
-  text-align: left; /* Alinea el contenido a la izquierda */
-  color:#9ab9de;
+ 
 }
 `
 
@@ -138,12 +147,32 @@ text-align:center;
 `
 
 export const H1Center = styled.h1`
-margin:5px auto 5px auto ;
-`
-export const ButtonRs = styled(Button)`
+  margin: 5px auto;
+ 
+  
+  
+`;
+
+export const ButtonL = styled(Button)`
   color: white;
   background-color: #0077b5; // Color de LinkedIn
   &:hover {
     background-color: #0e6bba; // Color de LinkedIn en hover
   }
 `;
+export const ButtonGm = styled(Button)`
+  color: white;
+  background-color: #FF5733; 
+  &:hover {
+    background-color: #D8231D ; 
+  }
+`;
+export const ButtonG = styled(Button)`
+  color: white;
+  background-color: black; // Color de LinkedIn
+  &:hover {
+    background-color: gray; // Color de LinkedIn en hover
+  }
+`;
+
+

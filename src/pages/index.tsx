@@ -1,13 +1,15 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { useState } from 'react'
-import {DivColumn,ImageCircular,H1Center,DivRow, DivProjects, DivRRSS, DivRS, Nav,ImageContainer,ImageContainerProjects, ImageStyled, ButtonRs} from '../components/componentsStyled.js'
+import Titulo from '../components/Titulo'
+import {DivColumn,ButtonGm,ImageCircular,H1Center,DivRow, Icon, DivProjects, DivRRSS, DivRS, Nav,ImageContainer,ImageContainerProjects, ImageStyled, ButtonL, ButtonG} from '../components/componentsStyled.js'
 import locc from '../components/loc.js'
 import pokedex from '../components/pokedex.js'
 import openair from '../components/openair.js'
-import { AccessAlarm, ThreeDRotation } from '@mui/icons-material';
-import AddCardIcon from '@mui/icons-material/AddCard';
 import { Button } from '@mui/material'
+import ImageSlider from '../components/ImageSlider.js'
+
+
+
 
 
 
@@ -19,21 +21,40 @@ import { Button } from '@mui/material'
 
 
 const Proyectos = () =>{
+  const images = [
+    {
+      id: 1,
+      src: 'https://pbs.twimg.com/media/Fs915fTWAA0wodc?format=jpg&name=large',
+      
+    },
+    {
+      id: 2,
+      src: 'https://pbs.twimg.com/media/Fs915gCWABwFJQY?format=jpg&name=large',
+    },
+   
+  ];
   return ( 
     <DivProjects>
-           <h1>League of Counters</h1>
-           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-           </p>
-              <ImageStyled
-                alt=''
-                src={'https://pbs.twimg.com/media/Ex-d7bmWUAgMCUx?format=jpg&name=large'}
-                width={600}
-                height={500}
-              />
-              
+    <h1>League of Counters</h1>
+    <p> En este proyecto universitario llamado League of Counters, trabajé tanto en el frontend como en el backend utilizando tecnologías como .NET, SQL Server y Bootstrap. El proyecto sigue el modelo MVC y se centra en el desarrollo de una aplicación web relacionada con el juego "League of Legends". El objetivo principal del proyecto fue implementar las funcionalidades básicas de la aplicación, como la gestión de usuarios, la visualización de estadísticas de juego y la búsqueda de otros jugadores en la plataforma. El proyecto fue un desafío interesante que me permitió desarrollar mis habilidades en el desarrollo web y aprender a trabajar con diferentes tecnologías y herramientas. Como tal, puedo incluir este proyecto en mi portafolio como una muestra de mi capacidad para trabajar en proyectos web completos.
+    </p>
+    <DivRow style={{ display: 'flex', gap: '2px' , margin: '10px'}}>
+           <h3>Tecnologías: </h3>
+            <Icon alt='css' src='https://cdn-icons-png.flaticon.com/512/5968/5968242.png' />
+            <Icon alt='js' src='https://cdn-icons-png.flaticon.com/512/5968/5968292.png' />
+            <Icon alt='.net' src='https://cdn-icons-png.flaticon.com/512/10125/10125077.png' />
+            <Icon alt='sql' src='https://cdn-icons-png.flaticon.com/512/5815/5815809.png' />
+            <Icon alt='bootstraps' src='https://cdn-icons-png.flaticon.com/512/5968/5968671.png' />
             
-              
-      </DivProjects>
+            </DivRow>
+   
+    <ImageSlider  images={images}></ImageSlider>
+  
+  
+       
+     
+       
+</DivProjects>
     
   )
 }
@@ -54,7 +75,9 @@ export default function Home() {
         
       </Head>
      
-        <Nav><h1>&quot;<em>Si yo no lo hago nadie lo hara</em>&quot;</h1></Nav>
+        <Nav></Nav>
+       
+       <Titulo></Titulo>
         <ImageContainer>
             <ImageStyled
               alt=''
@@ -64,44 +87,14 @@ export default function Home() {
             />
         </ImageContainer>
         
-        <DivColumn>
+        <DivColumn style={{margin: '0 auto 15px auto'}}>
         <h1>Sobre mi</h1>
-        <p>Soy un entusiasta del desarrollo web y estoy siempre buscando nuevas tecnologías y herramientas para seguir mejorando mis habilidades. Me apasiona trabajar en este campo y busco oportunidades para desarrollarme profesionalmente y aplicar mis habilidades en cada proyecto en el que participe. Tengo una actitud positiva y colaborativa en el trabajo en equipo y me esfuerzo por ser meticuloso y preciso en cada tarea que realizo. Mi objetivo es continuar adquiriendo experiencia y conocimiento en el campo del desarrollo web para seguir creciendo personal y profesionalmente.
+        <p>Soy un entusiasta del desarrollo de aplicaciones con inclinación hacia el desarrollo web, estoy siempre buscando nuevas tecnologías y herramientas para seguir mejorando mis habilidades. Me apasiona trabajar en este campo y busco oportunidades para desarrollarme profesionalmente y aplicar mis habilidades en cada proyecto en el que participe. Tengo una actitud positiva y colaborativa en el trabajo en equipo y me esfuerzo por ser meticuloso y preciso en cada tarea que realizo. Mi objetivo es continuar adquiriendo experiencia y conocimiento en el campo del desarrollo web para seguir creciendo personal y profesionalmente.
         </p>
         </DivColumn>
-        <DivRRSS >
-          <DivRS>
-        <ImageContainer>
-            <ImageCircular
-              alt=''
-              src={'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'}
-              width={100}
-              height={100}
-            />
-           
-        </ImageContainer>
-        <Button style={{color:'white'}} href="https://www.linkedin.com/in/gabriel-figueroa-42776b262/"><h1>Github</h1></Button>
-            
-          </DivRS>
-      <DivRS >
-          <ImageContainer>
-            <ImageCircular
-              alt=''
-              src={'https://pbs.twimg.com/profile_images/1508518003184349187/1KQYoqPY_400x400.png'}
-              width={100}
-              height={100}
-            />
-        </ImageContainer>
-        <ButtonRs  href="https://www.linkedin.com/in/gabriel-figueroa-42776b262/"><h1>Linkedin</h1></ButtonRs>
-            
-          
-      </DivRS >
-    
        
-        
-        </DivRRSS>
        
-        <DivColumn>
+        <DivColumn style={{ alignItems: 'center'}}>
         <H1Center>Mis proyectos</H1Center> 
          <DivRow>
        
@@ -116,23 +109,80 @@ export default function Home() {
         <H1Center>Mis habilidades</H1Center> 
         </DivRow>
        
-        <DivRRSS >
-          <DivRS>
+        <DivRow style={{textAlign: 'left', justifyContent: 'left'}}>
+          <DivColumn>
           <h1> Lenguajes y tecnologias</h1>
           <p>Tengo conocimiento alto: HTML, CSS, React, Next Js, JavaScript, .Net, Kotlin</p>
-          <p>Tengo conocimiento medio: Java, Sql, Android nativo, Bootstraps</p>
-          <p>Tengo conocimientos básicos: Nodejs, angular, Python y Php </p>
-          </DivRS>
-      <DivRS>
-          <h1>contacto</h1>
-        <a href=''>gmail</a>
-      </DivRS>       
-        </DivRRSS>
-
-        <footer>
-           <p>Este es el pie de página</p>
-        </footer>
+             <p>Tengo conocimiento medio: Java, Sql, Android nativo,TypeScript, Bootstraps</p>
+            <p>Tengo conocimientos básicos: Nodejs, angular, Python y Php</p>  
+            <DivRow style={{ display: 'flex', gap: '2px' , margin: '10px'}}>
+            <Icon alt='css' src='https://cdn-icons-png.flaticon.com/512/5968/5968242.png' />
+            <Icon alt='html' src='https://cdn-icons-png.flaticon.com/512/5968/5968267.png' />
+            <Icon alt='react' src='https://cdn-icons-png.flaticon.com/512/919/919851.png' />
+            <Icon alt='js' src='https://cdn-icons-png.flaticon.com/512/5968/5968292.png' />
+            <Icon alt='.net' src='https://cdn-icons-png.flaticon.com/512/10125/10125077.png' />
+            <Icon alt='kotlin' src='https://cdn-icons-png.flaticon.com/512/4300/4300493.png' />
+            <Icon alt='java' src='https://cdn-icons-png.flaticon.com/512/5968/5968282.png' />
+            <Icon alt='sql' src='https://cdn-icons-png.flaticon.com/512/5815/5815809.png' />
+            <Icon alt='android' src='https://cdn-icons-png.flaticon.com/512/174/174836.png' />
+            <Icon alt='bootstraps' src='https://cdn-icons-png.flaticon.com/512/5968/5968671.png' />
+            <Icon alt='nodejs' src='https://cdn-icons-png.flaticon.com/512/5968/5968322.png' />
+            <Icon alt='angular' src='https://as2.ftcdn.net/v2/jpg/02/95/03/85/1000_F_295038583_mn0uxJ6A0YO57HA4xXQqHFUjiW1BcqBE.jpg' />
+            <Icon alt='python' src='https://cdn-icons-png.flaticon.com/512/919/919852.png' />
+            <Icon alt='php' src='https://cdn-icons-png.flaticon.com/512/5968/5968332.png' />
+            <Icon alt='tsx' src='https://cdn-icons-png.flaticon.com/512/5968/5968381.png' />
+            
+            </DivRow>
+         
+          </DivColumn>
         
+        </DivRow>
+        <DivRRSS >
+          <DivRS>
+        <ImageContainer>
+            <ImageCircular
+              alt=''
+              src={'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'}
+              width={100}
+              height={100}
+            />
+           
+        </ImageContainer>
+        <ButtonG  href="https://www.linkedin.com/in/gabriel-figueroa-42776b262/"><h1>Github</h1></ButtonG>
+            
+          </DivRS>
+      <DivRS >
+          <ImageContainer>
+            <ImageCircular
+              alt=''
+              src={'https://pbs.twimg.com/profile_images/1508518003184349187/1KQYoqPY_400x400.png'}
+              width={100}
+              height={100}
+            />
+        </ImageContainer>
+        <ButtonL  href="https://www.linkedin.com/in/gabriel-figueroa-42776b262/"><h1>Linkedin</h1></ButtonL>
+            
+          
+      </DivRS >
+      <DivRS >
+          <ImageContainer>
+            <ImageCircular
+              alt=''
+              src={'https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg'}
+              width={100}
+              height={100}
+            />
+        </ImageContainer>
+        <ButtonGm  href="mailto:gabriel.figueroa@inacapmail.cl"><h1>Gmail</h1></ButtonGm>
+            
+          
+      </DivRS >
+    
+       
+        
+        </DivRRSS>
+       
+       
       
       
 
