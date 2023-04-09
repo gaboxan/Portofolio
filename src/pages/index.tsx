@@ -148,7 +148,7 @@ export default function Home() {
             />
            
         </ImageContainer>
-        <ButtonG  href="https://www.linkedin.com/in/gabriel-figueroa-42776b262/"><h1>Github</h1></ButtonG>
+        <ButtonG  href="https://github.com/gaboxan"><h1>Github</h1></ButtonG>
             
           </DivRS>
       <DivRS >
