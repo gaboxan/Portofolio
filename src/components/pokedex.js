@@ -4,12 +4,12 @@ import ImageSlider from '../components/ImageSlider.js'
 const images = [
   {
     id: 1,
-    src: 'https://pbs.twimg.com/media/Fs92Xw6WAAAgBxl?format=jpg&name=large',
+    src: 'https://pbs.twimg.com/media/FtZl87jWYAALQeN?format=jpg&name=large',
     
   },
   {
     id: 2,
-    src: 'https://pbs.twimg.com/media/Fs93BjpWABQM_jZ?format=jpg&name=large',
+    src: 'https://pbs.twimg.com/media/FtZljDUWIAIyPvD?format=jpg&name=large',
   },
   {
     id: 3,
